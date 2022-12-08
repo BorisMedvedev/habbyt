@@ -23,10 +23,10 @@
         </div>
       </a>
       <ul class="button-panel list-reset">
-        <li class="button-panel__item ">
-          <button class="button-panel__btn button-panel__btn--sport  btn-reset "></button>
+        <li class="button-panel__item button-panel__item--active" menu-habbit-id="1">
+          <button class="button-panel__btn button-panel__btn--sport  btn-reset"></button>
         </li>
-        <li class="button-panel__item button-panel__item--active">
+        <li class="button-panel__item">
           <button class="button-panel__btn button-panel__btn--water  btn-reset"></button>
         </li>
         <li class="button-panel__item">
@@ -72,8 +72,12 @@
               <div>День 2</div>
             </div>
             <div class="list-days__item-right">
-              <input type="text">
-              <button class="list-days__item-btn btn-reset">Готово</button>
+              <form class="list-days__form" action="#">
+                <label class="list-days__form-label" for="#">
+                  <input class="list-days__form-input" type="text" placeholder="Комментарий">
+                </label>
+                <button class="list-days__item-btn btn-reset">Готово</button>
+              </form>
             </div>
           </li>
 

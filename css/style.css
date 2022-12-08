@@ -60,7 +60,7 @@ img {
   align-items: center;
   max-width: 125px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
 }
 
@@ -220,6 +220,9 @@ img {
   display: flex;
   align-items: center;
   height: 54px;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .list-days__item-left {
@@ -230,7 +233,6 @@ img {
   background-color: #fbfaff;
   display: flex;
   align-items: center;
-  border-radius: 10px 0 0 10px;
   border-right: 1px solid #e7ebfb;
 }
 
@@ -243,7 +245,6 @@ img {
   align-items: center;
   justify-content: space-between;
   background: #ffffff;
-  border-radius: 0 10px 10px 0;
   height: 100%;
   font-size: 16px;
 }
@@ -270,8 +271,60 @@ img {
 }
 .list-days__item-btn {
   padding: 13px 30px;
-  background-color: #edecfe;
+  background-color: #6a6afb;
   border-radius: 9px;
   font-size: 13px;
-  color: #5051f9;
+  color: #fff;
+  box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.list-days__item-btn:hover {
+  background-color: #5051f9;
+}
+
+.list-days__form {
+  position: relative;
+  max-width: 655px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-days__form-label {
+  margin-right: 15px;
+  max-width: 521px;
+  width: 100%;
+}
+
+.list-days__form-input {
+  padding: 10px 20px 10px 48px;
+  max-width: 521px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e7ebfb;
+  border-radius: 9px;
+}
+
+.list-days__form-input::placeholder {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8899a8;
+}
+
+.list-days__form::after {
+  display: block;
+  position: absolute;
+  left: 20px;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../images/mesendg.svg");
+  width: 18px;
+  height: 18px;
 }
