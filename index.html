@@ -14,7 +14,8 @@
 </head>
 
 <body class="page-body">
-  <div class="container">
+  <div class="container habbit-container">
+
     <div class="sidebar-menu">
       <a class="logo" href="#">
         <div class="logo__img">
@@ -22,19 +23,64 @@
         </div>
       </a>
       <ul class="button-panel list-reset">
-        <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--sport "></button>
+        <li class="button-panel__item ">
+          <button class="button-panel__btn button-panel__btn--sport  btn-reset "></button>
+        </li>
+        <li class="button-panel__item button-panel__item--active">
+          <button class="button-panel__btn button-panel__btn--water  btn-reset"></button>
         </li>
         <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--water button-panel__btn--active"></button>
+          <button class="button-panel__btn button-panel__btn--food btn-reset"></button>
         </li>
-        <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--food"></button>
-        </li>
-        <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--add-btn"></button>
+        <li class="button-panel__item button-panel__item--add-btn">
+          <button class="button-panel__btn button-panel__btn--add-btn btn-reset"></button>
         </li>
       </ul>
+    </div>
+
+    <div class="content">
+      <div class="content__header">
+        <h3 class="content__header-title">Отжимания</h3>
+
+        <div class="progress-bar">
+          <div class="progress-bar__top">
+            <span class="progress-bar__name">Прогресс</span>
+            <span class="progress-bar__percent">18%</span>
+          </div>
+          <div class="progress-bar__progress-scale">
+            <div class="progress-bar__progress-percent"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="days">
+        <ul class="list-days list-reset">
+
+          <li class="list-days__item">
+            <div class="list-days__item-left">
+              <div>День 1</div>
+            </div>
+            <div class="list-days__item-right">
+              <div>Первый подход всегда даётся тяжело</div>
+              <button class="list-days__item-right-btn btn-reset"></button>
+            </div>
+          </li>
+
+          <li class="list-days__item">
+            <div class="list-days__item-left">
+              <div>День 2</div>
+            </div>
+            <div class="list-days__item-right">
+              <input type="text">
+              <button class="list-days__item-btn btn-reset">Готово</button>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
 
 </body>
