@@ -2,40 +2,39 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Habbit</title>
 
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
   <script src="./js/main.js" defer></script>
 </head>
 
 <body class="page-body">
   <div class="container habbit-container">
-
     <div class="sidebar-menu">
       <a class="logo" href="#">
         <div class="logo__img">
-          <img src="./images/logo.svg" alt="логотип Habbit" width="66" height="71">
+          <img src="./images/logo.svg" alt="логотип Habbit" width="66" height="71" />
         </div>
       </a>
-      <ul class="button-panel list-reset">
-        <li class="button-panel__item button-panel__item--active">
-          <button class="button-panel__btn button-panel__btn--sport  btn-reset"></button>
-        </li>
-        <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--water  btn-reset"></button>
-        </li>
-        <li class="button-panel__item">
-          <button class="button-panel__btn button-panel__btn--food btn-reset"></button>
-        </li>
-        <li class="button-panel__item button-panel__item--add-btn">
-          <button class="button-panel__btn button-panel__btn--add-btn btn-reset"></button>
-        </li>
-      </ul>
+      <nav class="button-panel list-reset">
+        <div class="button-panel__list">
+
+          <!-- <button class="button-panel__btn button-panel__btn--water btn-reset">
+            <img class="button-panel__btn-img" src="./images/voda.svg" alt="" />
+          </button>
+          <button class="button-panel__btn button-panel__btn--food btn-reset">
+            <img class="button-panel__btn-img" src="./images/eda.svg" alt="" />
+          </button> -->
+        </div>
+        <button class="button-panel__btn button-panel__btn--add-btn btn-reset">
+          <img class="button-panel__btn-img" src="./images/btn.svg" alt="" />
+        </button>
+      </nav>
     </div>
 
     <div class="content">
@@ -51,12 +50,10 @@
             <div class="progress-bar__progress-percent"></div>
           </div>
         </div>
-
       </div>
 
       <div class="days">
         <ul class="list-days list-reset">
-
           <li class="list-days__item">
             <div class="list-days__item-left">
               <div>День 1</div>
@@ -74,20 +71,16 @@
             <div class="list-days__item-right">
               <form class="list-days__form" action="#">
                 <label class="list-days__form-label" for="coment">
-                  <input class="list-days__form-input" id="coment" type="text" placeholder="Комментарий">
+                  <input class="list-days__form-input" id="coment" type="text" placeholder="Комментарий" />
                 </label>
                 <button class="list-days__item-btn btn-reset">Готово</button>
               </form>
             </div>
           </li>
-
         </ul>
-
       </div>
-
     </div>
   </div>
-
 </body>
 
 </html>

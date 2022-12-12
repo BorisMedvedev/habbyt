@@ -1,12 +1,15 @@
 let habbits = [];
 const HABBIT_KEY = "HABBIT_KEY";
 
-//utils========================
+const page = {
+  menu: document.querySelector(".button-panel__list"),
+};
+
 function loadData() {
-  const habbitsStrng = localStorage.getItem("HABBIT_KEY");
-  const habbitsArray = JSON.parse(habbitsStrng);
-  if (Array.isArray(habbitsArray)) {
-    habbits = habbitsArray;
+  const habbitsString = localStorage.getItem(HABBIT_KEY);
+  const habbitArray = JSON.parse(habbitsString);
+  if (Array.isArray(habbitArray)) {
+    habbits = habbitArray;
   }
 }
 
@@ -16,27 +19,34 @@ function saveData() {
 
 //render
 function rerenderMenu(activeHabbit) {
-  if (!activeHabbit) {
-    return;
-  }
   for (const habbit of habbits) {
-    existed = document.querySelector(`[manu-habbit-id="${habbit.id}"]`);
+    const existed = document.querySelector(`[menu-habbit-id="${habbit.id}"]`);
     if (!existed) {
-      //создание
+      const element = document.createElement("button");
+      element.setAttribute("menu-habbit-id", habbit.id);
+      element.classList.add("button-panel__btn", "btn-reset");
+      element.addEventListener("click", () => rerender(habbit.id));
+      element.innerHTML = `<img src="./images/${habbit.icon}.svg" alt="${habbit.name}" />`;
+      if (activeHabbit.id === habbit.id) {
+        element.classList.add("button-panel__btn--active");
+      }
+      page.menu.append(element);
+      continue;
     }
     if (activeHabbit.id === habbit.id) {
-      existed.classList.add("button-panel__item--active");
+      existed.classList.add("button-panel__btn--active");
     } else {
-      existed.classList.remove("button-panel__item--active");
+      existed.classList.remove("button-panel__btn--active");
     }
   }
 }
 
 function rerender(activeHabbitId) {
   const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
-  rerender(activeHabbit);
+  rerenderMenu(activeHabbit);
 }
 
 (() => {
   loadData();
+  rerender(habbits[0].id);
 })();
